@@ -23,6 +23,12 @@ router = DefaultRouter()
 
 router.register('customer',view_api.Customer,basename = 'customer')
 router.register('plan',view_api.Plan,basename = 'plan')
+router.register('lead',view_api.Lead,basename = 'lead')
+router.register('opportunities',view_api.Opportunities,basename = 'opportunitie')
+router.register('sale',view_api.Sales,basename = 'sale')
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

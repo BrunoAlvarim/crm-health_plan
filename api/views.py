@@ -28,3 +28,17 @@ class Plan(ModelViewSet):
     queryset = models.Plan.objects.filter(is_active = True).order_by('id')
     serializer_class = serializers.PlanSerializer
     pagination_class = Pagination
+
+class Lead(ModelViewSet):
+    queryset = models.Lead.objects.filter(is_active = True).order_by('id')
+    serializer_class = serializers.LeadSerializer
+    pagination_class = Pagination
+class Opportunities(ModelViewSet):
+    queryset = models.Opportunities.objects.filter(is_active = True).order_by('id')
+    serializer_class = serializers.OpportunitiesSerializer
+    pagination_class = Pagination
+
+class Sales(ModelViewSet):
+    queryset = models.Sales.objects.filter(is_active = True).order_by('id')
+    serializer_class = serializers.SalesSerializer
+    pagination_class = Pagination
