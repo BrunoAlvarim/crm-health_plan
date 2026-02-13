@@ -7,7 +7,7 @@ from .models import Customer
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):
-    # Colunas que aparecerão na listagem principal
+
     list_display = (
         'name', 
         'customer_type', 
