@@ -14,8 +14,8 @@ fake = Faker("pt_BR")
 # CONFIGURAÇÕES (fácil escalar)
 # -----------------------------
 
-CUSTOMERS_QTD = 90_000
-LEADS_QTD = 100_000
+CUSTOMERS_QTD = 2000
+LEADS_QTD = 5000
 
 PLAN_DISTRIBUTION = {
     "Basic": 60,
