@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.urls import path,include
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from django.http import HttpResponse
 
 import api.views as view_api
 
@@ -28,9 +29,11 @@ router.register('opportunities',view_api.Opportunities,basename = 'opportunitie'
 router.register('sale',view_api.Sales,basename = 'sale')
 
 
-
+def validat_render(request):
+    return HttpResponse("render ok")
 
 urlpatterns = [
+    path("", validat_render),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path(
